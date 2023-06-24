@@ -17,7 +17,7 @@ if (torch.cuda.is_available()):
     # if GPU available, use cuda (on a cpu, training will take a considerable length of time!)
     device = "cuda"
 
-FILE = "models\cifar10_model_1.pth"
+FILE = "cifar10_model_1.pth"
 checkpoint = torch.load(FILE)
 model_ft = torchvision.models.resnet152(weights=True)
 num_ftrs = model_ft.fc.in_features
