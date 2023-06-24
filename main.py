@@ -12,6 +12,9 @@ import numpy as np
 import os
 import matplotlib.pyplot as plt
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 device = "cpu"
 if (torch.cuda.is_available()):
     # if GPU available, use cuda (on a cpu, training will take a considerable length of time!)
